@@ -1,49 +1,5 @@
-/* Variables */
-
-$font-stack2: "Shrikhand", cursive;
-$font-stack: "roboto", sans-serif;
-$light-color: #f2f2f2;
-$black: #000000;
-$ligh-grey: #eaeaea;
-$pink: #ff79da;
-$footer-color: #353535;
-$blue-color: #9356dc;
-$light-blue-color: #68c5fa60;
-$lightish-grey: #e4e4e4;
-
-/* Mixins */
-
-@mixin btn-shape {
-  margin: 20px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-@mixin btn-shape2 {
-  border: none;
-  border-radius: 15px;
-  padding: 18px;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  text-decoration: none;
-  box-shadow: 2px 2px 6px 0.5px rgba(0, 0, 0, 0.1);
-  background-color: $light-color;
-  cursor: pointer;
-}
-
-@mixin vignettes {
-  padding: 0px;
-  background: #fff;
-  border-radius: 1.25rem;
-  margin: 0 0 0px 0;
-  box-shadow: 0px 0px 10px #55555538;
-  cursor: pointer;
-}
+@use 'Foundation/mixins.scss';
+@use 'Foundation/variables.scss';
 
 * {
   box-sizing: border-box;
