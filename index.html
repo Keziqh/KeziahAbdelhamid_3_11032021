@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=500, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/54250a0fa4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Style/main.css">
+    <link rel="stylesheet" href="SCSS/style.css">
 
     <title>Oh my food !</title>
 </head>
 
 <body>
 
-<header>
+<header class="header__container">
 
 <!-- Header logo -->
 
-<a class="logoheader" href="#" type="logo"><img src="images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood"></a>
-<!-- réduire l'arborescence -->
+<a class="header__logo" href="#" type="logo"><img src="images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood"></a>
 
 <!-- Sous Header  -->
 
-<span>
-    <h3><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h3>
+<span class="header__span">
+    <form><i class="fas fa-map-marker-alt"></i>  Paris, Belleville</form>
 </span>
 
 </header>
@@ -39,16 +38,71 @@
     <div class="section1__h3">
         <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
     </div>
-    <div class="section__btn">
-        <button type="button">Explorez nos restaurants</button>
+    <div >
+        <button class="section1__btn" type="button">Explorez nos restaurants</button>
     </div>
 </section>
 
 <!-- Présentation du fonctionnement  -->
 
+<section class="section__fonctionnement">
+    <button class="btn__fonctionnement" type="button">
+        <i class="btn__texticon"><i class="fas fa-mobile"></i>  Choisissez un restaurant</i>
+    </button>
+    <button class="btn__fonctionnement" type="button">
+        <i><i class="fas fa-bars"></i>  Composez votre menu</i>
+    </button>
+    <button class="btn__fonctionnement" type="button">
+        <i><i class="fas fa-store"></i>  Dégustez au restaurant</i>
+    </button>
+</section>
 
 
 <!-- Liste des Restaurants -->
+<section class="section__restaurants">
+    <h3 class="section__restautants--h3">Restaurants</h3>
+
+    <a href="">
+        <figure class="section__restaurants--vignette">
+            <img class="section__restaurants--img" src="images/restaurants/la-palette-du-gout.jpg" alt="La Palette du goût" title="La palette du goût">
+                <figcaption class="section__restautants--vignette-caption">
+                    <h4>La palette du goût</h4>
+                    <p>Ménilmontant</p>
+                </figcaption>
+        </figure>
+    </a>
+
+    <a href="">
+        <figure class="section__restaurants--vignette">
+            <img class="section__restaurants--img" src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée" title="La note enchantée">
+                <figcaption class="section__restautants--vignette-caption">
+                    <h4>La palette du goût</h4>
+                    <p>Ménilmontant</p>
+                </figcaption>
+        </figure>
+    </a>
+
+    <a href="">
+        <figure class="section__restaurants--vignette">
+            <img class="section__restaurants--img" src="images/restaurants/a-la-francaise.jpg" alt="A la française" title="A la française">
+                <figcaption class="section__restautants--vignette-caption">
+                    <h4>La palette du goût</h4>
+                    <p>Ménilmontant</p>
+                </figcaption>
+        </figure>
+    </a>
+
+    <a href="">
+        <figure class="section__restaurants--vignette">
+            <img class="section__restaurants--img" src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens" title="Le délice des sens">
+                <figcaption class="section__restautants--vignette-caption">
+                    <h4>La palette du goût</h4>
+                    <p>Ménilmontant</p>
+                </figcaption>
+        </figure>
+    </a>
+
+</section>
 
 </main>
 
@@ -56,6 +110,20 @@
 
 <footer>
 
+<div class="footer">
+    <a class="footer__img-logo" href="">
+        <!-- <img src="images/logo/ohmyfood@2x.svg"> -->
+    </a>
+
+    <h2>ohmyfood</h2>
+
+    <div class="footer__lu">
+        <a href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+        <a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+        <a href="">Mentions légales</a>
+        <a href="">Contact</a>
+    </div>
+</div>
 </footer>
 
 </body>
