@@ -1,5 +1,7 @@
 @import "Foundation/mixins";
 @import "Foundation/variables";
+@import "Foundation/responsive.scss";
+@import "Foundation/keyframes.scss";
 
 * {
   box-sizing: border-box;
@@ -26,6 +28,35 @@ body {
   background-color: $light-color;
   line-height: 1.2;
   text-align: center;
+}
+header,
+main,
+footer {
+  animation-name: body;
+  animation-delay: 1.5s;
+  animation-direction: forwards;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+
+/* Loader */
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid $blue-color;
+  border-bottom: 16px solid $green-color;
+  animation: spin;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: forwards;
+  animation-fill-mode: forwards;
 }
 
 /* Header */
@@ -125,11 +156,12 @@ a {
   padding-top: 30px;
   padding-bottom: 50px;
   .btn__fonctionnement {
-    margin: 10px 0;
+    margin: auto;
     width: 90vw;
     @include btn-shape2;
     display: flex;
     flex-direction: column;
+    counter-reset: 0;
   }
   .btn__fonctionnement:hover {
     background-color: $light-blue-color;
@@ -140,6 +172,9 @@ a {
       color: $black;
     }
     @include darker-shadow;
+    transform: scale(1.02);
+    transition: ease-out;
+    transition: 500ms;
   }
   .section__fonctionnement {
     font-weight: 600;
@@ -185,7 +220,13 @@ a {
     margin-left: 2.5%;
     margin-right: 2.5%;
     margin-top: 15px;
+    position: relative;
   }
+  /*.section__restaurants--vignette:hover {
+    transform: scale(1.02);
+    transition: ease-out;
+    transition: 500ms;
+  }*/
   .section__restaurants--img {
     height: 9rem;
     object-fit: cover;
@@ -222,10 +263,33 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
   .fa__heart {
+    position: absolute;
+    right: 5%;
+    bottom: 40%;
     padding: 20px;
+    fill: $pink;
   }
+  .fa__heart:hover {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    fill: $pink;
+  }
+}
+.vignette__nouveau p {
+  background-color: $green-color !important;
+  border: $green-color;
+  color: $darker-green-color;
+  font-weight: bold;
+  border-radius: 2px;
+  margin: 0;
+  padding: 6px 10px !important;
+  display: inline-block;
+  position: absolute;
+  right: 10%;
+  top: 10%;
 }
 
 /* Menus */
@@ -242,6 +306,17 @@ a {
 .fa__heart--menu {
   position: relative;
   top: 5px;
+  cursor: pointer;
+  padding-right: 2.5%;
+}
+.fas.fa-heart {
+  opacity: 0;
+}
+
+.fas.fa-heart:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  color: $pink;
 }
 
 .section__menu--titre {
@@ -285,13 +360,48 @@ a {
   background-color: $white;
   padding: 13px;
   margin: 8px;
+  animation: itemAppear;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  overflow: hidden;
   h4 {
     font-size: 15px;
     padding-bottom: 5px;
   }
   .menu__element--prix {
     font-weight: bolder;
+    margin: auto;
   }
+  &:hover {
+    .menu__element--confirmation {
+      margin-right: -1rem;
+    }
+    .menu__element--wrapicon {
+      transform: rotate(0);
+    }
+  }
+}
+.menu__element--confirmation {
+  background-color: $green-color;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+.menu__element--wrapicon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
 }
 
 .section__menu--btn-commander {

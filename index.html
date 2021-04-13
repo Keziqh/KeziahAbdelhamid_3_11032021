@@ -14,6 +14,8 @@
 
 <body>
 
+    <div class="loader"></div>
+
 <header class="header__container">
 
 <!-- Header logo -->
@@ -47,15 +49,17 @@
 
 <section class="section__fonctionnement">
     <h1>Fonctionnement</h1>
-    <button class="btn__fonctionnement" type="button">
-        <i class="btn__texticon"><i class="fas fa-mobile fa-fw"></i><p>Choisissez un restaurant</p>  </i>
-    </button>
-    <button class="btn__fonctionnement" type="button">
-        <i><i class="fas fa-bars fa-fw"></i> <p> Composez votre menu</p></i>
-    </button>
-    <button class="btn__fonctionnement" type="button">
-        <i><i class="fas fa-store fa-fw"></i>  <p>Dégustez au restaurant</p></i>
-    </button>
+    <div class="container__btn--fonctionnement">
+        <button class="btn__fonctionnement" type="button">
+            <i class="btn__texticon"><i class="fas fa-mobile fa-fw"></i><p>Choisissez un restaurant</p>  </i>
+        </button>
+        <button class="btn__fonctionnement" type="button">
+            <i><i class="fas fa-bars fa-fw"></i> <p> Composez votre menu</p></i>
+        </button>
+        <button class="btn__fonctionnement" type="button">
+            <i><i class="fas fa-store fa-fw"></i>  <p>Dégustez au restaurant</p></i>
+        </button>
+    </div>
 </section>
 
 
@@ -64,54 +68,54 @@
     <h1 class="section__restautants--h3">Restaurants</h1>
 
 
-        <figure class="section__restaurants--vignette">
-            <a href="/KeziahAbdelhamid_3_11032021/HTML/lapalettegugout.html"><img class="section__restaurants--img" src="images/restaurants/la-palette-du-gout.jpg" alt="La Palette du goût" title="La palette du goût"></a>
+        <div class="section__restaurants--elements">
+            <figure class="section__restaurants--vignette">
+                <a href="/KeziahAbdelhamid_3_11032021/HTML/lapalettegugout.html"><img class="section__restaurants--img" src="images/restaurants/la-palette-du-gout.jpg" alt="La Palette du goût" title="La palette du goût"></a>
+                    <span class="vignette__nouveau"><p>Nouveau</p></span>
                 <figcaption class="section__restautants--vignette-caption">
-                    <div class="vignettes__caption-txt">
-                        <h4>La palette du goût</h4>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <div class="fa__heart"><i class="far fa-heart fa-fw"></i></div>
-                </figcaption>
-        </figure>
-
-
-
-        <figure class="section__restaurants--vignette">
-            <a href="/KeziahAbdelhamid_3_11032021/HTML/lanoteenchantee.html"><img class="section__restaurants--img" src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée" title="La note enchantée"></a>
+                        <div class="vignettes__caption-txt">
+                            <h4>La palette du goût</h4>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="fa__heart"><i class="far fa-heart fa-fw fa-stack-1x"></i>
+                            <i class="fas fa-heart fa-fw fa-stack-1x"></i></i></div>
+                    </figcaption>
+            </figure>
+            <figure class="section__restaurants--vignette">
+                <a href="/KeziahAbdelhamid_3_11032021/HTML/lanoteenchantee.html"><img class="section__restaurants--img" src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée" title="La note enchantée"></a>
+                <span class="vignette__nouveau"><p>Nouveau</p></span>
                 <figcaption class="section__restautants--vignette-caption">
-                    <div class="vignettes__caption-txt">
-                        <h4>La note enchantée</h4>
-                        <p>Charonne</p>
-                    </div>
-                    <div class="fa__heart"><i class="far fa-heart fa-fw"></i></div>
-                </figcaption>
-        </figure>
-
-
-
-        <figure class="section__restaurants--vignette">
-            <a href="HTML/alafrancaise.html"><img class="section__restaurants--img" src="images/restaurants/a-la-francaise.jpg" alt="A la française" title="A la française"></a>
-                <figcaption class="section__restautants--vignette-caption">
-                    <div class="vignettes__caption-txt">
-                        <h4>A la française</h4>
-                        <p>Cité rouge</p>
-                    </div>
-                    <div class="fa__heart"><i class="far fa-heart fa-fw"></i></div>
-                </figcaption>
-        </figure>
-
-
-        <figure class="section__restaurants--vignette">
-            <a href="/KeziahAbdelhamid_3_11032021/HTML/ledelicedessens.html"><img class="section__restaurants--img" src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens" title="Le délice des sens"></a>
-                <figcaption class="section__restautants--vignette-caption">
-                    <div class="vignettes__caption-txt">
-                        <h4>Le délice des sens</h4>
-                        <p>Folie-Méricourt</p>
-                    </div>
-                    <div class="fa__heart"><i class="far fa-heart fa-fw"></i></div>
-                </figcaption>
-        </figure>
+                        <div class="vignettes__caption-txt">
+                            <h4>La note enchantée</h4>
+                            <p>Charonne</p>
+                        </div>
+                        <div class="fa__heart"><i class="far fa-heart fa-fw fa-stack-1x"></i>
+                            <i class="fas fa-heart fa-fw fa-stack-1x"></i></i></div>
+                    </figcaption>
+            </figure>
+            <figure class="section__restaurants--vignette">
+                <a href="HTML/alafrancaise.html"><img class="section__restaurants--img" src="images/restaurants/a-la-francaise.jpg" alt="A la française" title="A la française"></a>
+                    <figcaption class="section__restautants--vignette-caption">
+                        <div class="vignettes__caption-txt">
+                            <h4>A la française</h4>
+                            <p>Cité rouge</p>
+                        </div>
+                        <div class="fa__heart"><i class="far fa-heart fa-fw fa-stack-1x"></i>
+                            <i class="fas fa-heart fa-fw fa-stack-1x"></i></i></div>
+                    </figcaption>
+            </figure>
+            <figure class="section__restaurants--vignette">
+                <a href="/KeziahAbdelhamid_3_11032021/HTML/ledelicedessens.html"><img class="section__restaurants--img" src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens" title="Le délice des sens"></a>
+                    <figcaption class="section__restautants--vignette-caption">
+                        <div class="vignettes__caption-txt">
+                            <h4>Le délice des sens</h4>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="fa__heart"><i class="far fa-heart fa-fw fa-stack-1x"></i>
+                            <i class="fas fa-heart fa-fw fa-stack-1x"></i></i></div>
+                    </figcaption>
+            </figure>
+        </div>
 
 
 </section>
@@ -133,7 +137,7 @@
         <p><a href=""><i class="fas fa-utensils fa-fw"></i>Proposer un restaurant</a></p>
         <p><a href=""><i class="fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></p>
         <p><a href="">Mentions légales</a></p>
-        <p><a href="">Contact</a></p>
+        <p><a href="mailto:contact@ohmyfood.fr">Contact</a></p>
     </div>
 </div>
 </footer>
