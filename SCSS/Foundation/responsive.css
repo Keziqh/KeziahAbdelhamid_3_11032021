@@ -1,0 +1,72 @@
+/* Mixins */
+/* Variables */
+@media (min-width: 550px) {
+  header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #e4e4e4;
+  }
+  .header__logo {
+    width: 100vw;
+  }
+  .header__span {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+  .section1__btn {
+    width: 16rem;
+  }
+  body .section__fonctionnement .btn__fonctionnement {
+    width: 27vw;
+  }
+  .container__btn--fonctionnement {
+    display: flex;
+    flex-direction: row !important;
+  }
+  body .section__fonctionnement h1 {
+    margin: auto;
+    text-align: left;
+    margin-left: 5%;
+  }
+  body .section__restaurants h1 {
+    padding-left: 30px;
+  }
+  .section__restaurants--elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+  }
+  .section__restaurants--vignette {
+    min-width: 20vw;
+    max-width: 36vw !important;
+    margin-top: 20px !important;
+  }
+  .section__menu--container {
+    max-width: 100vw;
+  }
+  .section__menu--container .btn__element {
+    max-width: 30vw;
+    height: auto;
+  }
+  .menu__element--txt {
+    text-align: left;
+    position: relative;
+    padding: 1vw;
+  }
+  .menu__element--txt p {
+    width: 20vw !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    position: absolute;
+  }
+  .menu__element--txt h4 {
+    width: 20vw !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+  }
+}
