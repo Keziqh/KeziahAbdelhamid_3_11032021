@@ -33,6 +33,9 @@
     flex-direction: row !important;
     justify-content: center !important;
   }
+  .section__fonctionnement {
+    border-radius: 2rem 2rem 0 0;
+  }
   body .section__fonctionnement h1 {
     margin: auto;
     text-align: left;

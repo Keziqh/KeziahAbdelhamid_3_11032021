@@ -28,7 +28,7 @@ body {
   text-align: center;
   box-shadow: 0px 0px 50px 0.8px rgba(0, 0, 0, 0.4);
 }
-header,
+.headermenu__container,
 main,
 footer {
   animation-name: body;
@@ -259,7 +259,11 @@ a {
     margin-top: 15px;
     position: relative;
   }
-
+  .section__restaurants--vignette:hover {
+    transform: scale(1.09);
+    transition: 500ms;
+    animation-timing-function: ease-in-out;
+  }
   .section__restaurants--img {
     height: 9rem;
     object-fit: cover;
