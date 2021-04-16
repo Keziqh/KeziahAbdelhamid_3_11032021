@@ -7,12 +7,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-tap-highlight-color: transparent;
 }
 
 *:focus {
   outline: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 p {
@@ -28,12 +26,13 @@ body {
   background-color: $light-color;
   line-height: 1.2;
   text-align: center;
+  box-shadow: 0px 0px 50px 0.8px rgba(0, 0, 0, 0.4);
 }
 header,
 main,
 footer {
   animation-name: body;
-  animation-delay: 1.5s;
+  animation-delay: 3s;
   animation-direction: forwards;
   animation-duration: 500ms;
   animation-fill-mode: both;
@@ -53,7 +52,8 @@ footer {
   border-top: 16px solid $blue-color;
   border-bottom: 16px solid $green-color;
   animation: spin;
-  animation-duration: 2s;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-direction: forwards;
   animation-fill-mode: forwards;
@@ -62,18 +62,22 @@ footer {
 /* Header */
 
 header {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: $light-color;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   .header__logo {
     text-align: center;
+    margin-top: auto;
     padding: 20px 0;
     box-shadow: 0px 0px 5px 2px grey;
     position: relative;
   }
-  .header__span {
+
+  form {
     text-align: center;
     padding: 20px 0;
     background-color: $lightish-grey;
@@ -87,12 +91,13 @@ header {
   top: 0;
 }
 .headermenu__logo-arrow {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: $light-color;
   padding-top: 20px;
   padding-bottom: 20px;
+  position: relative;
 }
 .headermenu__logo {
   text-align: center;
@@ -124,6 +129,8 @@ a {
   text-align: center;
   position: relative;
   background-color: $ligh-grey;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   h1 {
     padding-top: 40px;
@@ -141,27 +148,56 @@ a {
     @include color-gradient;
     color: $light-color;
     @include btn-shape;
+    font-weight: bolder;
+    font-size: large;
   }
   .section1__btn:hover {
     @include darker-shadow;
     transform: scale(1.02);
     transition-duration: 300ms;
-    @include color-gradient-light;
+    @include color-gradient-inverted;
   }
 }
+
 /* Fonctionnement */
 
 .section__fonctionnement {
   background-color: white;
   padding-top: 30px;
   padding-bottom: 50px;
-  .btn__fonctionnement {
-    margin: auto;
-    width: 90vw;
-    @include btn-shape2;
+  counter-reset: section;
+  .container__btn--fonctionnement {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn__fonctionnement {
+    margin: auto;
+    width: 80vw;
+    max-height: 10vw;
+    @include btn-shape2;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     counter-reset: 0;
+    position: relative;
+    font-weight: bold;
+  }
+  .btn__fonctionnement::before {
+    counter-increment: section;
+    content: counter(section);
+    border-radius: 100px;
+    color: $white;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 15px;
+    background-color: $blue-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -0.75rem;
   }
   .btn__fonctionnement:hover {
     background-color: $light-blue-color;
@@ -183,6 +219,8 @@ a {
   }
   i {
     float: left;
+    margin-right: 10px;
+    color: $grey;
   }
   .btn_texticon {
     text-align: center;
@@ -193,7 +231,6 @@ a {
     font-weight: bolder;
   }
   p {
-    width: 100%;
     display: inline;
     text-align: center;
     padding: 20px;
@@ -222,11 +259,7 @@ a {
     margin-top: 15px;
     position: relative;
   }
-  /*.section__restaurants--vignette:hover {
-    transform: scale(1.02);
-    transition: ease-out;
-    transition: 500ms;
-  }*/
+
   .section__restaurants--img {
     height: 9rem;
     object-fit: cover;
@@ -278,7 +311,7 @@ a {
     fill: $pink;
   }
 }
-.vignette__nouveau p {
+.vignette__nouveau {
   background-color: $green-color !important;
   border: $green-color;
   color: $darker-green-color;
@@ -352,18 +385,21 @@ a {
 .section__menu--element {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
+
 .btn__element {
   @include btn-shape-element;
   width: 90%;
   background-color: $white;
   padding: 13px;
   margin: 8px;
-  animation: itemAppear;
+  animation: itemAppear forwards;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   overflow: hidden;
+  margin: auto;
+  margin-top: 10px;
   h4 {
     font-size: 15px;
     padding-bottom: 5px;
@@ -408,9 +444,11 @@ a {
   color: $light-color;
   @include btn-shape;
   @include color-gradient;
+  font-weight: bolder;
+  font-size: large;
 }
 .section__menu--btn-commander:hover {
-  @include color-gradient-light;
+  @include color-gradient-inverted;
   transform: scale(1.1);
   transition: 500ms;
   transition-timing-function: ease-in-out;

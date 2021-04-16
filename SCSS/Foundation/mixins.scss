@@ -38,7 +38,7 @@
   background: #fff;
   border-radius: 1.25rem;
   margin: 0 0 0px 0;
-  box-shadow: 0px 0px 10px #55555538;
+  box-shadow: 0px 3px 10px 0.8px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
@@ -58,11 +58,11 @@
   );
 }
 
-@mixin color-gradient-light {
+@mixin color-gradient-inverted {
   background: linear-gradient(
     90deg,
-    rgba(146, 86, 220, 0.5) 0%,
-    rgba(255, 121, 217, 0.5) 100%
+    rgba(255, 121, 218, 1) 0%,
+    rgba(147, 86, 220, 1) 100%
   );
 }
 
