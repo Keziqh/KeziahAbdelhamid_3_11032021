@@ -1,0 +1,73 @@
+/* Mixins */
+
+@mixin btn-shape {
+  margin: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@mixin btn-shape2 {
+  border: none;
+  border-radius: 15px;
+  padding: 18px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.2);
+  background-color: $light-color;
+  cursor: pointer;
+}
+
+@mixin btn-shape-element {
+  border: none;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-decoration: none;
+  box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.2);
+  background-color: $light-color;
+  cursor: pointer;
+}
+
+@mixin vignettes {
+  padding: 0px;
+  background: #fff;
+  border-radius: 1.25rem;
+  margin: 0 0 0px 0;
+  box-shadow: 0px 3px 10px 0.8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+@mixin darker-shadow {
+  box-shadow: 3px 3px 4px 0.8px rgba(0, 0, 0, 0.4);
+}
+
+@mixin upper-shadow {
+  box-shadow: 0px -15px 20px -4px rgba(0, 0, 0, 0.63);
+}
+
+@mixin color-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+}
+
+@mixin color-gradient-inverted {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 121, 218, 1) 0%,
+    rgba(147, 86, 220, 1) 100%
+  );
+}
+
+@mixin categories-txt {
+  font-weight: 300;
+  text-align: left;
+  padding-left: 5%;
+}
