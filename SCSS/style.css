@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* Mixins */
 /* Variables */
+/* Mixins */
 /* Mixins */
 /* Variables */
 @media (min-width: 550px) {
@@ -21,7 +21,6 @@
   .header__span {
     width: 100%;
     margin: auto;
-    padding: auto;
   }
   .section1__btn {
     width: 16rem;
@@ -104,7 +103,6 @@
   100% {
     transform: translateY(0%) scale(1);
     opacity: 1;
-    scale: 1;
   }
 }
 
@@ -156,12 +154,12 @@ body {
   box-shadow: 0px 0px 50px 0.8px rgba(0, 0, 0, 0.4);
 }
 
-.headermenu__container,
+.footer__index,
 main,
-footer {
+.header__container {
   animation-name: body;
   animation-delay: 3s;
-  animation-direction: forwards;
+  animation-direction: normal;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
@@ -183,7 +181,7 @@ footer {
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
-  animation-direction: forwards;
+  animation-direction: normal;
   animation-fill-mode: forwards;
 }
 
@@ -328,7 +326,6 @@ a {
   display: flex;
   align-items: center;
   flex-direction: row;
-  counter-reset: 0;
   position: relative;
   font-weight: bold;
 }
@@ -508,7 +505,6 @@ a {
   box-shadow: 0px -15px 20px -4px rgba(0, 0, 0, 0.63);
   position: relative;
   bottom: 2.5rem;
-  padding-bottom: auto;
 }
 
 .fa__heart--menu {
@@ -567,9 +563,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.btn__element {
   border: none;
   border-radius: 15px;
   margin-top: 10px;
@@ -581,30 +574,67 @@ a {
   background-color: white;
   padding: 13px;
   margin: 8px;
-  animation: itemAppear forwards;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
   overflow: hidden;
   margin: auto;
   margin-top: 10px;
 }
 
-.btn__element h4 {
+.section__menu--element h4 {
   font-size: 15px;
   padding-bottom: 5px;
 }
 
-.btn__element .menu__element--prix {
+.section__menu--element .menu__element--prix {
   font-weight: bolder;
   margin: auto;
 }
 
-.btn__element:hover .menu__element--confirmation {
+.section__menu--element:hover .menu__element--confirmation {
   margin-right: -1rem;
 }
 
-.btn__element:hover .menu__element--wrapicon {
+.section__menu--element:hover .menu__element--wrapicon {
   transform: rotate(0);
+}
+
+.btn__element {
+  animation: itemAppear 5s forwards ease-in;
+}
+
+.btn__element--1 {
+  animation-delay: 0.55556s;
+}
+
+.btn__element--2 {
+  animation-delay: 1.11111s;
+}
+
+.btn__element--3 {
+  animation-delay: 1.66667s;
+}
+
+.btn__element--4 {
+  animation-delay: 2.22222s;
+}
+
+.btn__element--5 {
+  animation-delay: 2.77778s;
+}
+
+.btn__element--6 {
+  animation-delay: 3.33333s;
+}
+
+.btn__element--7 {
+  animation-delay: 3.88889s;
+}
+
+.btn__element--8 {
+  animation-delay: 4.44444s;
+}
+
+.btn__element--9 {
+  animation-delay: 5s;
 }
 
 .menu__element--confirmation {
