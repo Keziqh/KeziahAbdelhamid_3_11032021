@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Variables */
 /* Mixins */
 /* Mixins */
 /* Variables */
@@ -93,11 +92,9 @@
   }
 }
 
-/* Mixins */
-/* Variables */
 @keyframes itemAppear {
   0% {
-    transform: translateY(300%) scale(0.8);
+    transform: translateY(100%) scale(0.8);
     opacity: 0;
   }
   100% {
@@ -563,6 +560,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.btn__element {
   border: none;
   border-radius: 15px;
   margin-top: 10px;
@@ -579,62 +579,54 @@ a {
   margin-top: 10px;
 }
 
-.section__menu--element h4 {
+.btn__element h4 {
   font-size: 15px;
   padding-bottom: 5px;
 }
 
-.section__menu--element .menu__element--prix {
+.btn__element .menu__element--prix {
   font-weight: bolder;
   margin: auto;
 }
 
-.section__menu--element:hover .menu__element--confirmation {
+.btn__element:hover .menu__element--confirmation {
   margin-right: -1rem;
 }
 
-.section__menu--element:hover .menu__element--wrapicon {
+.btn__element:hover .menu__element--wrapicon {
   transform: rotate(0);
 }
 
-.btn__element {
-  animation: itemAppear 5s forwards ease-in;
+.anim--1 {
+  animation: itemAppear 0.5s;
+  animation-delay: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 
-.btn__element--1 {
-  animation-delay: 0.55556s;
+.anim--2 {
+  animation: itemAppear 0.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 
-.btn__element--2 {
-  animation-delay: 1.11111s;
+.anim--3 {
+  animation: itemAppear 0.5s;
+  animation-delay: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 
-.btn__element--3 {
-  animation-delay: 1.66667s;
-}
-
-.btn__element--4 {
-  animation-delay: 2.22222s;
-}
-
-.btn__element--5 {
-  animation-delay: 2.77778s;
-}
-
-.btn__element--6 {
-  animation-delay: 3.33333s;
-}
-
-.btn__element--7 {
-  animation-delay: 3.88889s;
-}
-
-.btn__element--8 {
-  animation-delay: 4.44444s;
-}
-
-.btn__element--9 {
-  animation-delay: 5s;
+.anim--4 {
+  animation: itemAppear 0.5s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 
 .menu__element--confirmation {

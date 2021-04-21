@@ -1,9 +1,6 @@
-@import "mixins";
-@import "variables";
-
 @keyframes itemAppear {
   0% {
-    transform: translateY(300%) scale(0.8);
+    transform: translateY(100%) scale(0.8);
     opacity: 0;
   }
   100% {

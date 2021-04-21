@@ -1,4 +1,3 @@
-@import "Foundation/variables.scss";
 @import "Foundation/mixins";
 @import "Foundation/responsive.scss";
 @import "Foundation/keyframes.scss";
@@ -388,6 +387,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.btn__element {
   @include btn-shape-element;
   width: 90%;
   background-color: $white;
@@ -414,13 +415,33 @@ a {
   }
 }
 
-.btn__element {
-  animation: itemAppear $anim-dur forwards ease-in;
-  @for $i from 1 through $num-elem {
-    &--#{$i} {
-      animation-delay: $anim-delay * $i;
-    }
-  }
+.anim--1 {
+  animation: itemAppear 0.5s;
+  animation-delay: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+.anim--2 {
+  animation: itemAppear 0.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+.anim--3 {
+  animation: itemAppear 0.5s;
+  animation-delay: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+.anim--4 {
+  animation: itemAppear 0.5s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 .menu__element--confirmation {
   background-color: $green-color;
