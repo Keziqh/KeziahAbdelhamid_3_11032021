@@ -1,32 +1,78 @@
-@keyframes itemAppear {
+@-webkit-keyframes itemAppear {
   0% {
-    transform: translateY(100%) scale(0.8);
+    -webkit-transform: translateY(100%) scale(0.8);
+            transform: translateY(100%) scale(0.8);
     opacity: 0;
   }
   100% {
-    transform: translateY(0%) scale(1);
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes itemAppear {
+  0% {
+    -webkit-transform: translateY(100%) scale(0.8);
+            transform: translateY(100%) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
   }
 }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
     opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes body {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes body {
   0% {
     opacity: 0;
-    transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
+/*# sourceMappingURL=keyframes.css.map */
