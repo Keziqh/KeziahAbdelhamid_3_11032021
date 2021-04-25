@@ -658,13 +658,14 @@ a {
 
 .fas.fa-heart {
   opacity: 0;
+  font-size: 20px;
 }
 
 .fas.fa-heart:hover {
   opacity: 1;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  color: #ff79da;
+  color: #9356dc;
 }
 
 .section__menu--titre {
@@ -747,7 +748,7 @@ a {
 }
 
 .btn__element:hover .menu__element--confirmation {
-  margin-right: -1rem;
+  margin-right: -20px;
 }
 
 .btn__element:hover .menu__element--wrapicon {
@@ -809,8 +810,8 @@ a {
 
 .menu__element--confirmation {
   background-color: #99e2d0;
-  margin: -1rem -5rem -1rem 1rem;
-  width: 4rem;
+  margin: -1rem -5rem -1rem 0rem;
+  width: 100px;
   height: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -843,6 +844,7 @@ a {
           transform: rotate(180deg);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  color: #99e2d0;
 }
 
 .section__menu--btn-commander {

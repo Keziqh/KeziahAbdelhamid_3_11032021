@@ -345,12 +345,13 @@ a {
 }
 .fas.fa-heart {
   opacity: 0;
+  font-size: 20px;
 }
 
 .fas.fa-heart:hover {
   opacity: 1;
   transition: 0.3s ease-in-out;
-  color: $pink;
+  color: $blue-color
 }
 
 .section__menu--titre {
@@ -407,7 +408,7 @@ a {
   }
   &:hover {
     .menu__element--confirmation {
-      margin-right: -1rem;
+      margin-right: -20px;
     }
     .menu__element--wrapicon {
       transform: rotate(0);
@@ -445,8 +446,8 @@ a {
 }
 .menu__element--confirmation {
   background-color: $green-color;
-  margin: -1rem -5rem -1rem 1rem;
-  width: 4rem;
+  margin: -1rem -5rem -1rem 0rem;
+  width: 100px;
   height: 6rem;
   display: flex;
   align-items: center;
@@ -464,6 +465,7 @@ a {
   border-radius: 100px;
   transform: rotate(180deg);
   transition-duration: 0.5s;
+  color: $green-color;
 }
 
 .section__menu--btn-commander {
