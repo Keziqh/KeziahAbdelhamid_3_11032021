@@ -305,12 +305,11 @@ a {
     right: 5%;
     bottom: 40%;
     padding: 20px;
-    fill: $pink;
+    font-size: 20px;
   }
   .fa__heart:hover {
     opacity: 1;
     transition: 0.3s ease-in-out;
-    fill: $pink;
   }
 }
 .vignette__nouveau {
@@ -345,13 +344,18 @@ a {
 }
 .fas.fa-heart {
   opacity: 0;
-  font-size: 20px;
 }
 
 .fas.fa-heart:hover {
   opacity: 1;
   transition: 0.3s ease-in-out;
-  color: $blue-color
+  background: linear-gradient(
+    90deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section__menu--titre {
@@ -447,7 +451,7 @@ a {
 .menu__element--confirmation {
   background-color: $green-color;
   margin: -1rem -5rem -1rem 0rem;
-  width: 100px;
+  width: 4rem;
   height: 6rem;
   display: flex;
   align-items: center;
